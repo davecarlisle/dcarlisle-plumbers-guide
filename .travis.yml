@@ -21,4 +21,4 @@ deploy:
   app: plumbers-demo
   on:
     all_branches: true
-    condition: "$(git branch | grep -v 'master')"
+    condition: '$(git branch | grep "\* master") == ""'
