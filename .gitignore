@@ -1,0 +1,9 @@
+.bundle/
+.sass-cache/
+_site/
+bin/
+tmp/
+vendor/gems/
+
+.jekyll-metadata
+*.log
