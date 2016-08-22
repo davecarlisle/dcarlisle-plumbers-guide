@@ -1,0 +1,24 @@
+language: ruby
+rvm:
+- 2.3.1
+
+# speed up builds
+cache: bundler
+
+# invoke this script instead of rake (the Travis default)
+script: script/cibuild
+
+# do not email results of every build
+notifications:
+  email: false
+
+# deployment
+deploy:
+  skip_cleanup: true
+  provider: heroku
+  api_key:
+    secure: tP3748IZL7QNCOICvqPIGOzHQuK5VLD1AsOP/FRypFbmedkim1xAMKqcYM3MqRZi27c80x/FgldYc6ZUPMkrQxT2yUDQjZtdtjeGcc11fFW79xJe4Pw6PbBQ5KMehCe3BFLEM8UNFSVRNJhoa70984bkOpvchhHP21bUfUwpahLZucw9FZwd/B2yuezmYUIpIiQ/D9czswtnbJPQfLFpwXurnT9sRzycJhnn3Hki8Rn8ZWwekxCdOHPhPhFhTTi+oxtC4n9cSbMLO4d702/99GEzi/LaZw8JsDU5ALzxZ2WcS90VNp0EVp89r0NOjKWR/8aaBBkvtV3tSHkXD7lRmndUMX9YpIQ+/rPO8HljkTgdd7RsdbA8Q/kFMZfEGvCfZ/aGjgmJAbSSlSwuRle6RU8Lk+WbaF14tn19Qy8JEcDprsHNyJE22efZHXfF+8gNri6A5U2NkVH3os6erl4Bs2hW9EERQR5qltQ7DAF2GMRP4H1g98lL+6mAfgzSkPVZCRZHw03xDl1Nx3SpFHTbWn8a8AKvyWkBDi6VFDDANJaHQJWMR5nIcLMxopwk/kKaIZNTZaSjabzXGk60Q+4vlUi02DeX7FZqHml1V6NLPz0oUXuPUO9MaoRpzRxtuf0kSj1CsgGdERGr69R6tt42BQsbvaXhu1qKcbmNsBtWqLw=
+  app: plumbers-demo
+  on:
+    all_branches: true
+    condition: "$(git branch | grep -v 'master')"

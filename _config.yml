@@ -1,0 +1,32 @@
+#domain: services-engagements.herokuapp.com
+author: GitHub Professional Services
+email: stefan@github.com
+title: The Plumbers Guide to the Galaxy
+description: > # this means to ignore newlines until "baseurl:"
+  The Plumbers Guide to the Galaxy - Implementing a CI/CD Pipeline with GitHub
+
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://plumbers-guide.herokuapp.com" # the base hostname & protocol for your site
+
+twitter_username: me_stoe
+github_username:  stoe
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+theme: minima
+
+highlighter: rouge
+exclude:
+  - bin
+  - Gemfile
+  - Gemfile.lock
+  - gems
+  - Procfile
+  - Rakefile
+  - README.md
+  - script
+  - vendor
+
+permalinks: pretty

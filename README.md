@@ -11,5 +11,5 @@ This class is designed for those with intermediate Git and GitHub knowledge, but
 - :octocat: @hectorsector
 
 **Links**:
-[Heroku](https://signup.heroku.com/)
-[Travis CI](https://travis-ci.org/)
+- [Heroku](https://signup.heroku.com/)
+- [Travis CI](https://travis-ci.org/)

@@ -3,7 +3,7 @@
 _site/
 bin/
 tmp/
-vendor/gems/
+vendor/
 
 .jekyll-metadata
 *.log
